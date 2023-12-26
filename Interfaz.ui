@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>442</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>7</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Registro de Catalogo</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Manejo de archivos/icono/e2.ico</normaloff>../Manejo de archivos/icono/e2.ico</iconset>
+  </property>
+  <widget class="QTabWidget" name="pantalla">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>601</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(135, 135, 163);
+QTabBar::tab {
+    background-color: rgb(135, 135, 163);
+}</string>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Productos</string>
+    </attribute>
+    <widget class="QTableWidget" name="tabla_productos">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>80</y>
+       <width>501</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Black</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+    background-color: #333333;
+    color: #fffff8;
+}
+
+QHeaderView::section {
+    background-color: #646464;
+    padding: 2px;
+    border: 1px solid #fffff8;
+    font-size: 9pt;
+}
+
+QTableWidget {
+    gridline-color: #fffff8;
+    font-size: 12pt;
+}
+
+QTableWidget QTableCornerButton::section {
+    background-color: #646464;
+    border: 1px solid #fffff8;
+}</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>Codigo</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Nombre</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Modelo</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Precio</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Cantidad</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QPushButton" name="bt_refrescar">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>380</y>
+       <width>91</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(2, 230, 47);
+border: 2px solid green;
+selection-background-color: rgb(170, 255, 127);
+border-radius: 10px;
+color: white;</string>
+     </property>
+     <property name="text">
+      <string>Refrescar</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../Manejo de archivos/icono/check.png</normaloff>../Manejo de archivos/icono/check.png</iconset>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>30</y>
+       <width>501</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Mostrar los productos registrados usando el botón refrescar:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Buscar producto</string>
+    </attribute>
+    <widget class="QTableWidget" name="tabla_buscar">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>110</y>
+       <width>501</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+    background-color: #333333;
+    color: #fffff8;
+}
+
+QHeaderView::section {
+    background-color: #646464;
+    padding: 2px;
+    border: 1px solid #fffff8;
+    font-size: 9pt;
+}
+
+QTableWidget {
+    gridline-color: #fffff8;
+    font-size: 12pt;
+}
+
+QTableWidget QTableCornerButton::section {
+    background-color: #646464;
+    border: 1px solid #fffff8;
+}</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>Codigo</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Nombre</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Modelo</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Precio</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Cantidad</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>10</y>
+       <width>501</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_8">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Busque el producto mediante su nombre:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <family>Imprint MT Shadow</family>
+            <pointsize>7</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>NOMBRE:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="codigoB">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    border: 2px solid #A8A8A8; /* Borde*/
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 5px; /* Espaciado interno */
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: #333; /* Color del texto */
+}
+
+QLineEdit:focus {
+    border: 2px solid #45a049; /* Cambio de color del borde al obtener el foco */
+}
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="bt_buscar">
+          <property name="font">
+           <font>
+            <pointsize>7</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 127);
+border: 2px solid yellow;
+border-radius: 10px;</string>
+          </property>
+          <property name="text">
+           <string>Buscar</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../Manejo de archivos/icono/buscar.png</normaloff>../Manejo de archivos/icono/buscar.png</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>Agregar nuevo producto</string>
+    </attribute>
+    <widget class="QPushButton" name="bt_agregar">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>340</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(40, 19, 148);
+border: rgb(85, 85, 255);
+selection-background-color: rgb(170, 255, 127);
+border-radius: 10px;
+color: white;</string>
+     </property>
+     <property name="text">
+      <string>Agregar</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../Manejo de archivos/icono/agregar.png</normaloff>../Manejo de archivos/icono/agregar.png</iconset>
+     </property>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>90</y>
+       <width>321</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <family>Imprint MT Shadow</family>
+            <pointsize>7</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Nombre:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <family>Imprint MT Shadow</family>
+            <pointsize>7</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Modelo:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="font">
+           <font>
+            <family>Imprint MT Shadow</family>
+            <pointsize>7</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Precio:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="font">
+           <font>
+            <family>Imprint MT Shadow</family>
+            <pointsize>7</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Cantidad:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="nombreA">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    border: 2px solid #A8A8A8; /* Borde*/
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 5px; /* Espaciado interno */
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: #333; /* Color del texto */
+}
+
+QLineEdit:focus {
+    border: 2px solid #45a049; /* Cambio de color del borde al obtener el foco */
+}
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="modeloA">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    border: 2px solid #A8A8A8; /* Borde*/
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 5px; /* Espaciado interno */
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: #333; /* Color del texto */
+}
+
+QLineEdit:focus {
+    border: 2px solid #45a049; /* Cambio de color del borde al obtener el foco */
+}
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="precioA">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    border: 2px solid #A8A8A8; /* Borde*/
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 5px; /* Espaciado interno */
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: #333; /* Color del texto */
+}
+
+QLineEdit:focus {
+    border: 2px solid #45a049; /* Cambio de color del borde al obtener el foco */
+}
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="cantidadA">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    border: 2px solid #A8A8A8; /* Borde*/
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 5px; /* Espaciado interno */
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: #333; /* Color del texto */
+}
+
+QLineEdit:focus {
+    border: 2px solid #45a049; /* Cambio de color del borde al obtener el foco */
+}
+</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>30</y>
+       <width>501</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Agregue un producto ingresando sus atributos:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>Actualizar producto</string>
+    </attribute>
+    <widget class="QWidget" name="verticalLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>20</y>
+       <width>160</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="font">
+         <font>
+          <family>Imprint MT Shadow</family>
+          <pointsize>7</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Ingrese el ID del producto:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="id_producto">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #A8A8A8; /* Borde*/
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 5px; /* Espaciado interno */
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: #333; /* Color del texto */
+}
+
+QLineEdit:focus {
+    border: 2px solid #45a049; /* Cambio de color del borde al obtener el foco */
+}
+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="id_buscar">
+        <property name="font">
+         <font>
+          <pointsize>7</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 127);
+border: 2px solid yellow;
+border-radius: 10px;</string>
+        </property>
+        <property name="text">
+         <string>Buscar</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../Manejo de archivos/icono/buscar.png</normaloff>../Manejo de archivos/icono/buscar.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>140</y>
+       <width>271</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_9">
+          <property name="font">
+           <font>
+            <family>Imprint MT Shadow</family>
+            <pointsize>7</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Nombre:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_10">
+          <property name="font">
+           <font>
+            <family>Imprint MT Shadow</family>
+            <pointsize>7</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Modelo:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_11">
+          <property name="font">
+           <font>
+            <family>Imprint MT Shadow</family>
+            <pointsize>7</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Precio:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_12">
+          <property name="font">
+           <font>
+            <family>Imprint MT Shadow</family>
+            <pointsize>7</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Cantidad:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QLineEdit" name="nombre_actualizar">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    border: 2px solid #A8A8A8; /* Borde*/
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 5px; /* Espaciado interno */
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: #333; /* Color del texto */
+}
+
+QLineEdit:focus {
+    border: 2px solid #45a049; /* Cambio de color del borde al obtener el foco */
+}
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="modelo_actualizar">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    border: 2px solid #A8A8A8; /* Borde*/
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 5px; /* Espaciado interno */
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: #333; /* Color del texto */
+}
+
+QLineEdit:focus {
+    border: 2px solid #45a049; /* Cambio de color del borde al obtener el foco */
+}
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="precio_actualizar">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    border: 2px solid #A8A8A8; /* Borde*/
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 5px; /* Espaciado interno */
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: #333; /* Color del texto */
+}
+
+QLineEdit:focus {
+    border: 2px solid #45a049; /* Cambio de color del borde al obtener el foco */
+}
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="cantidad_actualizar">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    border: 2px solid #A8A8A8; /* Borde*/
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 5px; /* Espaciado interno */
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: #333; /* Color del texto */
+}
+
+QLineEdit:focus {
+    border: 2px solid #45a049; /* Cambio de color del borde al obtener el foco */
+}
+</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="bt_actualizar">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>250</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(85, 170, 127);
+border: rgb(0, 85, 0);
+color: rgb(255, 255, 255);
+border-radius: 10px;</string>
+     </property>
+     <property name="text">
+      <string>Actualizar</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../Manejo de archivos/icono/update.png</normaloff>../Manejo de archivos/icono/update.png</iconset>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>Borrar producto</string>
+    </attribute>
+    <widget class="QTableWidget" name="tabla_borrar">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>80</y>
+       <width>501</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+    background-color: #333333;
+    color: #fffff8;
+}
+
+QHeaderView::section {
+    background-color: #646464;
+    padding: 2px;
+    border: 1px solid #fffff8;
+    font-size: 9pt;
+}
+
+QTableWidget {
+    gridline-color: #fffff8;
+    font-size: 12pt;
+}
+
+QTableWidget QTableCornerButton::section {
+    background-color: #646464;
+    border: 1px solid #fffff8;
+}
+</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>Codigo</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Nombre</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Modelo</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Precio</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Cantidad</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>0</y>
+       <width>261</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_13">
+        <property name="font">
+         <font>
+          <family>Imprint MT Shadow</family>
+          <pointsize>7</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>NOMBRE:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="codigo_borrar">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #A8A8A8; /* Borde*/
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 5px; /* Espaciado interno */
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: #333; /* Color del texto */
+}
+
+QLineEdit:focus {
+    border: 2px solid #45a049; /* Cambio de color del borde al obtener el foco */
+}
+</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="bt_borrar">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>380</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border: 1px solid red;
+border-radius: 10px;</string>
+     </property>
+     <property name="text">
+      <string>Borrar</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../Manejo de archivos/icono/x-mark.png</normaloff>../Manejo de archivos/icono/x-mark.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="borrar_ok">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>20</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(76, 74, 74);
+color: rgb(255, 255, 255);
+border-radius: 10px;</string>
+     </property>
+     <property name="text">
+      <string>OK</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
